@@ -1,0 +1,765 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-size: 10px;
+}
+#app {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+input {
+  outline: none;
+}
+.icon {
+  font-size: 22px;
+  color: #8a8a8a;
+  margin-bottom: 5px;
+}
+.iconActive {
+  color: #2c2c2c;
+}
+.reying,
+zhaopian {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+.footer {
+  height: 44px;
+}
+.bottomNav {
+  flex: none;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  color: #8a8a8a;
+  padding-top: 3px;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fff;
+}
+.ryContent {
+  height: 100%;
+  overflow: hidden;
+}
+.onShowMovie {
+  background-color: #fff;
+}
+.jjContent {
+  height: 600px;
+  overflow: hidden;
+}
+.zpContent {
+  height: 600px;
+  overflow: hidden;
+}
+.ryHhead {
+  height: 14%;
+  flex: none;
+  margin-top: 15px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+.ryHhead .cityChoose {
+  width: 15%;
+  flex: 4 0.5 15%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}
+.ryHhead .cityChoose span,
+.ryHhead .cityChoose i {
+  font-size: 0.3rem;
+  color: #5c5c5c;
+}
+.ryHhead .movieSearch,
+.ryHhead .longerSearch {
+  width: 80%;
+  flex: 1 0.4 75%;
+  text-align: center;
+}
+.ryHhead .movieSearch input,
+.ryHhead .longerSearch input {
+  height: 0.6rem;
+  border: 1px solid #fff;
+  width: 90%;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+.bottomTip {
+  text-align: center;
+  color: #909090;
+}
+.ryTabs {
+  flex: auto;
+}
+.ryTabs .is-top {
+  color: #C8C8C8;
+}
+.ryTabs .is-active {
+  color: #424242;
+}
+.ryTabs .el-tabs__active-bar {
+  background-color: #424242;
+  height: 0.035rem;
+}
+.ryTabs .el-tabs__nav.is-stretch {
+  padding-bottom: 8px;
+}
+.ryTabs .el-tabs__header {
+  margin: 8px 0 2px;
+}
+.outterBox {
+  height: 10%;
+}
+.outterBox .tabBox {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+.outterBox .tabBox .tabText {
+  font-size: 0.186667rem;
+  width: 45%;
+  height: 60%;
+  text-align: center;
+  color: #C8C8C8;
+}
+.outterBox .tabBox .activeTab {
+  color: #000;
+}
+.outterBox .slideBox {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+  border-bottom: 0.026667rem solid #c8c8c8;
+  height: 20%;
+  position: relative;
+}
+.outterBox .slideBox .slideLine {
+  position: absolute;
+  bottom: -1%;
+  left: 0;
+  margin-bottom: 1%;
+  width: 45%;
+  height: 0.026667rem;
+  background-color: #000;
+}
+.cityChoosePop {
+  background-color: #fff;
+}
+.cityChoosePop .popHead {
+  height: 5%;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 5px;
+}
+.cityChoosePop .popHead i {
+  color: #FF6633;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+.cityChoosePop .popHead i,
+.cityChoosePop .popHead span {
+  margin-top: 8px;
+}
+.cityChoosePop .specificChoose {
+  height: 30px;
+}
+.cityChoosePop .specificChoose .el-tabs__nav.is-stretch {
+  padding-bottom: 8px;
+}
+.cityChoosePop .specificChoose .is-top {
+  color: #C8C8C8;
+}
+.cityChoosePop .specificChoose .is-active {
+  color: #000;
+}
+.cityChoosePop .specificChoose .el-tabs__active-bar {
+  background-color: #000;
+  height: 0.035rem;
+}
+.cityChoosePop .specificChoose .cityEnter {
+  margin: 5px 0;
+}
+.cityChoosePop .specificChoose .cityEnter i {
+  font-size: 10px;
+  color: #a5a5a5;
+  display: inline-block;
+  margin: 0 10px;
+}
+.cityChoosePop .specificChoose .cityEnter input {
+  border: none;
+  height: 0.6rem;
+  font-size: 0.4rem;
+}
+.cityChoosePop .cityList {
+  background-color: #dedede;
+  padding: 0 14px 14px 14px;
+  color: #8a8a8a;
+}
+.cityChoosePop .cityList .hotCity {
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 7px;
+  line-height: 0.6rem;
+  padding: 7px;
+  font-size: 0.3rem;
+}
+.searchPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+.searchPage .searchHead {
+  background-color: #42BA54;
+  padding: 0.2rem 0 0.2rem 0.2rem;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.searchPage .searchHead .search {
+  width: 80%;
+  background-color: #fff;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.searchPage .searchHead .search .el-input__inner {
+  text-indent: 5px;
+  height: 28px;
+  border: none;
+}
+.searchPage .searchHead span {
+  color: #fff;
+  font-size: 0.2rem;
+}
+.searchPage .searchBox {
+  background-color: #F5F1EE;
+}
+.searchPage .searchBox div {
+  line-height: 40px;
+  display: inline-block;
+  width: 47%;
+  text-indent: 15px;
+}
+.searchPage .searchBox .left {
+  text-align: left;
+  color: #9C9D98;
+}
+.searchPage .searchBox .right {
+  text-align: right;
+  color: #474843;
+}
+.searchPage .historyItem {
+  line-height: 40px;
+  text-indent: 8px;
+  border-top: 1px solid #F5F1EE;
+  border-left: 1px solid #F5F1EE;
+}
+.movieBox {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #E4E4E4;
+  padding: 3% 0;
+}
+.movieBox .leftBox {
+  display: flex;
+  display: -webkit-flex;
+  width: 25%;
+}
+.movieBox .leftBox img {
+  height: 100%;
+  width: 100%;
+}
+.movieBox .middleBox {
+  width: 45%;
+}
+.movieBox .middleBox .mh1 {
+  font-size: 0.25rem;
+  line-height: 0.50rem;
+  font-weight: 800;
+  color: #494949;
+}
+.movieBox .middleBox .mh2 {
+  font-size: 0.12rem;
+  line-height: 0.40rem;
+  color: #909090;
+}
+.movieBox .rightBox {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  color: #FF8592;
+  font-size: 0.18rem;
+}
+.movieBox .rightBox .rBtn {
+  border: 1px solid #FF8592;
+  width: 70%;
+  height: 20%;
+  color: #FF8592;
+  outline: none;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 0.18rem;
+}
+.dateChoose {
+  background-color: #fff;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  font-size: 0.15rem;
+  padding: 0.15rem;
+  color: #ccc;
+  border-bottom: 0.02rem solid #e4e4e4;
+}
+.dateChoose .blank {
+  width: 30%;
+  border-right: 1px solid #c8c8c8;
+}
+.dateChoose span {
+  cursor: pointer;
+}
+.dateChoose .selectedMonth {
+  color: #494949;
+}
+.dateSplit {
+  background-color: #f7f7f7;
+  line-height: 0.55rem;
+  font-size: 0.18rem;
+  padding-left: 0.2rem;
+  color: #9b9b9b;
+}
+.zpTitleBox {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  color: #494949;
+  padding: 0 0.2rem;
+  font-size: 0.25rem;
+  align-items: center;
+}
+.zpTitleBox .icon-arrow-right {
+  font-size: 0.12rem;
+  color: #494949;
+}
+.zpContentBox {
+  height: 12rem;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.searchMovieBox {
+  height: 48%;
+  padding: 0 0.2rem;
+}
+.searchMovieBox .topBox {
+  height: 70%;
+  width: 2.88rem;
+  display: inline-block;
+}
+.searchMovieBox .topBox img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+.searchMovieBox .bottomBox {
+  height: 30%;
+}
+.searchMovieBox .bottomBox .title {
+  font-weight: 800;
+  display: inline-block;
+  padding: 0.1rem 0;
+  overflow: hidden;
+  /*自动隐藏文字*/
+  text-overflow: ellipsis;
+  /*文字隐藏后添加省略号*/
+  white-space: nowrap;
+  /*强制不换行*/
+  width: 2.88rem;
+}
+.searchMovieBox .bottomBox .mj {
+  font-size: 0.12rem;
+  line-height: 0.40rem;
+  color: #909090;
+  display: inline-block;
+}
+.wdHead {
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533392818130&di=58a79f67da9157b97c6f21115b65d620&imgtype=0&src=http%3A%2F%2Fpic35.photophoto.cn%2F20150611%2F0008118001599564_b.jpg) center no-repeat;
+  height: 4.5rem;
+  display: flex;
+  display: -webkit-flex;
+}
+.wdHead .headIcon {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 3rem;
+}
+.wdHead .headIcon div {
+  width: 2rem;
+  height: 2rem;
+}
+.wdHead .headIcon div img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid #fff;
+}
+.wdHead .headInfo {
+  display: flex;
+  display: -webkit-flex;
+  margin-left: 0.5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+.wdHead .headInfo div {
+  color: #fff;
+}
+.wdHead .headInfo .myName {
+  font-size: 0.5rem;
+}
+.wdHead .headInfo .myTicket {
+  margin-top: 0.2rem;
+  font-size: 0.3rem;
+  border: 0.02rem solid #fff;
+  border-radius: 0.1rem;
+  width: 2.5rem;
+  text-align: right;
+  line-height: 0.8rem;
+  padding-right: 0.4rem;
+}
+.wdHead .headInfo .myTicket i {
+  color: #fff;
+  text-align: center;
+  font-size: 0.4rem;
+  margin-right: 0.1rem;
+}
+.wdContent .el-tabs__item {
+  height: 0.7rem;
+  color: #999;
+}
+.wdContent .el-tabs__active-bar {
+  background-color: #424242;
+}
+.wdContent .is-active {
+  color: #424242;
+}
+.wdContent .betweenMsg {
+  line-height: 1rem;
+  background-color: #f2f1ee;
+  color: #797877;
+  text-indent: 0.3rem;
+  border-bottom: 0.05rem solid #e4e4e4;
+}
+.wdContent .wdContentBox .wdContent {
+  margin-top: 0.3rem;
+  border-bottom: 0.02rem solid #e4e4e4;
+}
+.wdContent .wdContentBox .wdContent .title {
+  font-size: 0.5rem;
+  color: #494949;
+  text-indent: 0.5rem;
+  line-height: 0.7rem;
+}
+.wdContent .wdContentBox .wdContent .info {
+  font-size: 0.3rem;
+  color: #9b9b9b;
+  text-indent: 0.3rem;
+  line-height: 0.5rem;
+}
+.mdSlideBox {
+  overflow: hidden;
+}
+.mdTopHead {
+  border: 0.2rem solid #7F6623;
+  background-color: #7F6623;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  align-items: baseline;
+  color: #fff;
+  z-index: 100;
+}
+.mdTopHead div {
+  width: 33.33%;
+  line-height: 0.7rem;
+}
+.mdTopHead i {
+  color: #fff;
+  font-size: 0.5rem;
+}
+.mdTopHead .headLeft {
+  text-align: left;
+}
+.mdTopHead .headLeft i {
+  margin: 0 0.2rem;
+}
+.mdTopHead .headMiddle {
+  text-align: center;
+  font-size: 0.4rem;
+}
+.mdTopHead .headMiddle i {
+  margin: 0 0.2rem;
+}
+.mdTopHead .headRight {
+  text-align: right;
+}
+.mdTopHead .headRight i {
+  margin: 0 0.4rem;
+}
+.movieImg {
+  background-color: #7F6623;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  height: 6.7rem;
+  padding: 0.4rem 0 0.6rem 0;
+}
+.movieImg .imgBox {
+  width: 50%;
+}
+.movieImg .imgBox img {
+  width: 100%;
+  height: 100%;
+}
+.movieInfo {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.13rem;
+  border-top: 0.3rem solid #F9F7EF;
+  padding: 0 0.3rem;
+  background-color: #F9F7EF;
+}
+.movieInfo .infoLeft {
+  color: #979797;
+  width: 75%;
+}
+.movieInfo .infoLeft .mTitle {
+  color: #494949;
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+.movieInfo .infoRight {
+  width: 20%;
+  margin-right: 0.6rem;
+  padding: 0.15rem 0.15rem 0.2rem 0.15rem;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.05rem solid #F9F7EF;
+  box-shadow: #e7e6de 0 0 0.2rem 0.1rem;
+}
+.movieInfo .infoRight .ir1 {
+  color: #cecece;
+  font-size: 0.08rem;
+}
+.movieInfo .infoRight .ir2 {
+  font-size: 0.6rem;
+  font-weight: 100;
+  color: #494949;
+}
+.movieInfo .infoRight .ir3 {
+  color: #9b9b9b;
+}
+.movieInfo .infoRight .smallFont {
+  font-size: 0.2rem;
+  line-height: 0.6rem;
+}
+.commentDiv {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  background-color: #F9F7EF;
+  padding: 0.8rem 0 0.5rem 0;
+}
+.commentDiv button {
+  height: 1rem;
+  font-size: 0.3rem;
+  background-color: #F9F7EF;
+  border: 0.04rem solid #ffc46c;
+  border-radius: 0.1rem;
+  outline: none;
+  color: #ffc46c;
+}
+.commentDiv .btnLeft {
+  width: 25%;
+  margin-right: 0.2rem;
+}
+.commentDiv .btnRight {
+  width: 55%;
+}
+.breifIntro {
+  background-color: #F9F7EF;
+  padding-top: 0.5rem;
+  border-top: 0.02rem solid #e4e4e4;
+}
+.breifIntro p {
+  text-indent: 0.5rem;
+  color: #9b9b9b;
+}
+.breifIntro .intro {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-height: 0.5rem;
+  text-indent: 0.5rem;
+  letter-spacing: 0.05rem;
+  color: #494949;
+  overflow: hidden;
+}
+.breifIntro .intro span {
+  color: #42BD56;
+}
+.casts {
+  border-top: 0.5rem solid #F9F7EF;
+  background-color: #F9F7EF;
+  padding-bottom: 1rem;
+}
+.casts .title {
+  text-indent: 0.5rem;
+  color: #9b9b9b;
+}
+.casts .castBox {
+  flex: none;
+  width: 2.1rem;
+  height: 3rem;
+  margin: 0.1rem 0.2rem;
+}
+.casts .castBox img {
+  width: 100%;
+  height: 100%;
+}
+.casts .castBox .actorName {
+  text-align: center;
+  margin-top: 0.1rem;
+}
+.casts .castBox .roleName {
+  text-align: center;
+  color: #9b9b9b;
+}
+.castsInnerBox {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+}
+.discuss {
+  padding-top: 0.6rem;
+  background-color: #F9F7EF;
+}
+.discuss .title {
+  text-indent: 0.5rem;
+  font-size: 0.4rem;
+  color: #494949;
+}
+.discuss .discussBox {
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 0.5rem;
+}
+.discuss .discussBox .headIcon {
+  width: 12%;
+}
+.discuss .discussBox .headIcon img {
+  border: 1px solid #F9F7EF;
+  border-radius: 50%;
+  height: 0.7rem;
+  width: 0.7rem;
+}
+.discuss .discussBox .discussRightBox {
+  width: 88%;
+}
+.discuss .discussBox .discussRightBox .discussTop,
+.discuss .discussBox .discussRightBox .customer {
+  display: flex;
+  display: -webkit-flex;
+  font-size: 0.3rem;
+}
+.discuss .discussBox .discussRightBox .discussTop .cscore,
+.discuss .discussBox .discussRightBox .customer .cscore {
+  margin-left: 0.2rem;
+  font-size: 0.3rem;
+}
+.discuss .discussBox .discussRightBox .discussTop {
+  justify-content: space-between;
+  padding: 0 0.2rem;
+}
+.discuss .discussBox .discussRightBox .thumbUp {
+  width: 20%;
+}
+.discuss .discussBox .discussRightBox .thumbUp i {
+  color: #3c3c3c;
+  font-size: 0.4rem;
+}
+.discuss .discussBox .discussRightBox .thumbUp span {
+  margin-left: 0.3rem;
+}
+.discuss .discussBox .discussRightBox .discussContent {
+  padding: 0.2rem;
+  line-height: 0.5rem;
+  letter-spacing: 0.08rem;
+  font-size: 0.3rem;
+}
+.discuss .discussBox .discussRightBox .discussContent p {
+  font-size: 0.5rem;
+  line-height: 0.7rem;
+  text-align: center;
+}
+.discuss .el-tabs__nav {
+  padding-bottom: 8px;
+}
+.discuss .el-tabs__active-bar {
+  background-color: #424242;
+}
+.discuss .is-top {
+  color: #C8C8C8;
+}
+.discuss .is-active {
+  color: #424242;
+}
+.starS {
+  font-size: 0.1rem;
+  color: #FFAC2D;
+}
+.star {
+  font-size: 0.12rem;
+  color: #FFAC2D;
+}
+.color90 {
+  color: #909090;
+  line-height: 0.40rem;
+}

@@ -1,0 +1,250 @@
+{
+    "code": "1",
+    "data": {
+        "advertisement": {
+            "advList": [
+                {
+                    "advTag": "广告",
+                    "endDate": 1548172799,
+                    "isHorizontalScreen": false,
+                    "isOpenH5": false,
+                    "startDate": 1514736000,
+                    "tag": "商城hellokitty+商城夏日出游",
+                    "type": "203",
+                    "typeName": "影片详情页banner2",
+                    "url": "https://static4da.mtime.cn/feature/mobile/banner/2018/0802/cykt750210.html"
+                }
+            ],
+            "count": 1,
+            "error": "",
+            "success": true
+        },
+        "basic": {
+            "actors": [
+                {
+                    "actorId": 1993475,
+                    "img": "http://img31.mtime.cn/ph/2014/09/26/105617.72460110_1280X720X2.jpg",
+                    "name": "沈腾",
+                    "nameEn": "Teng Shen",
+                    "roleImg": "",
+                    "roleName": "王多鱼"
+                },
+                {
+                    "actorId": 2090555,
+                    "img": "http://img31.mtime.cn/ph/2015/11/18/155034.80099341_1280X720X2.jpg",
+                    "name": "宋芸桦",
+                    "nameEn": "Song Yun Hua",
+                    "roleImg": "",
+                    "roleName": "夏竹"
+                },
+                {
+                    "actorId": 1272881,
+                    "img": "http://img31.mtime.cn/ph/2014/02/22/213624.58530426_1280X720X2.jpg",
+                    "name": "张晨光",
+                    "nameEn": "Chenguang Zhang",
+                    "roleImg": "",
+                    "roleName": "金先生"
+                },
+                {
+                    "actorId": 1320947,
+                    "img": "http://img31.mtime.cn/ph/2015/09/30/100153.74027068_1280X720X2.jpg",
+                    "name": "张一鸣",
+                    "nameEn": "Yiming Zhang",
+                    "roleImg": "",
+                    "roleName": "庄强"
+                },
+                {
+                    "actorId": 2063720,
+                    "img": "http://img31.mtime.cn/ph/2013/08/30/202539.78236568_1280X720X2.jpg",
+                    "name": "常远",
+                    "nameEn": "Yuan Chang",
+                    "roleImg": "",
+                    "roleName": "柳建南"
+                },
+                {
+                    "actorId": 2238800,
+                    "img": "http://img5.mtime.cn/ph/2016/10/24/092848.90429426_1280X720X2.jpg",
+                    "name": "魏翔",
+                    "nameEn": "Xiang Wei",
+                    "roleImg": "",
+                    "roleName": "大翔队主教练"
+                },
+                {
+                    "actorId": 2148095,
+                    "img": "http://img31.mtime.cn/ph/2015/09/23/155814.95270359_1280X720X2.jpg",
+                    "name": "艾伦",
+                    "nameEn": "Allen Ai",
+                    "roleImg": "",
+                    "roleName": "恒太队主力高然"
+                },
+                {
+                    "actorId": 1304028,
+                    "img": "http://img5.mtime.cn/ph/2017/03/03/100222.72110586_1280X720X2.jpg",
+                    "name": "徐冬冬",
+                    "nameEn": "Raquel",
+                    "roleImg": "",
+                    "roleName": "莎莎"
+                },
+                {
+                    "actorId": 1176572,
+                    "img": "http://img5.mtime.cn/ph/2018/07/27/103703.38688322_1280X720X2.jpg",
+                    "name": "赵自强",
+                    "nameEn": "Tzi-chiang Chao",
+                    "roleImg": "",
+                    "roleName": ""
+                },
+                {
+                    "actorId": 1410080,
+                    "img": "http://img31.mtime.cn/ph/2014/06/10/170744.82704609_1280X720X2.jpg",
+                    "name": "吕孔维",
+                    "nameEn": "Kungwei Lv",
+                    "roleImg": "",
+                    "roleName": ""
+                },
+                {
+                    "actorId": 2343918,
+                    "img": "http://img5.mtime.cn/ph/2018/07/27/095654.41281301_1280X720X2.jpg",
+                    "name": "王成思",
+                    "nameEn": "",
+                    "roleImg": "",
+                    "roleName": "大聪明"
+                },
+                {
+                    "actorId": 990139,
+                    "img": "http://img5.mtime.cn/ph/2017/08/30/165611.41324726_1280X720X2.jpg",
+                    "name": "李立群",
+                    "nameEn": "Lichun Lee",
+                    "roleImg": "",
+                    "roleName": "王多鱼爷爷"
+                },
+                {
+                    "actorId": 1654566,
+                    "img": "http://img31.mtime.cn/ph/2016/08/28/201213.13547108_1280X720X2.jpg",
+                    "name": "包贝尔",
+                    "nameEn": "Beier Bao",
+                    "roleImg": "",
+                    "roleName": ""
+                },
+                {
+                    "actorId": 942612,
+                    "img": "http://img31.mtime.cn/ph/2014/04/11/174215.89999002_1280X720X2.jpg",
+                    "name": "王力宏",
+                    "nameEn": "LeeHom Wang",
+                    "roleImg": "",
+                    "roleName": "王力宏"
+                }
+            ],
+            "award": {
+                "awardList": [],
+                "totalNominateAward": 0,
+                "totalWinAward": 0
+            },
+            "bigImage": "",
+            "commentSpecial": "沈腾宋芸桦感受大手大脚花钱",
+            "community": {},
+            "director": {
+                "directorId": 2114123,
+                "img": "http://img31.mtime.cn/ph/2015/09/23/113918.99192686_1280X720X2.jpg",
+                "name": "闫非",
+                "nameEn": "Fei Yan"
+            },
+            "festivals": [],
+            "hotRanking": -1,
+            "img": "http://img5.mtime.cn/mt/2018/07/23/113049.24374498_1280X720X2.jpg",
+            "is3D": false,
+            "isDMAX": false,
+            "isEggHunt": true,
+            "isFilter": false,
+            "isIMAX": true,
+            "isIMAX3D": false,
+            "isTicket": true,
+            "message": "该操作将清除您对该片的评分！是否确认？",
+            "mins": "118分钟",
+            "movieId": 253688,
+            "movieStatus": 1,
+            "name": "西虹市首富",
+            "nameEn": "Hello Mr. Billionaire",
+            "overallRating": 6.7,
+            "personCount": 16,
+            "quizGame": {},
+            "releaseArea": "中国",
+            "releaseDate": "20180727",
+            "sensitiveStatus": false,
+            "showCinemaCount": 134,
+            "showDay": 1533801600,
+            "showtimeCount": 2180,
+            "stageImg": {
+                "count": 161,
+                "list": [
+                    {
+                        "imgId": 7460275,
+                        "imgUrl": "http://img5.mtime.cn/pi/2018/05/18/142102.65425020_1280X720X2.jpg"
+                    },
+                    {
+                        "imgId": 7480615,
+                        "imgUrl": "http://img5.mtime.cn/pi/2018/07/23/113105.33944807_1280X720X2.jpg"
+                    },
+                    {
+                        "imgId": 7480616,
+                        "imgUrl": "http://img5.mtime.cn/pi/2018/07/23/113106.20947343_1280X720X2.jpg"
+                    },
+                    {
+                        "imgId": 7480617,
+                        "imgUrl": "http://img5.mtime.cn/pi/2018/07/23/113109.55945496_1280X720X2.jpg"
+                    }
+                ]
+            },
+            "story": "影片改编自1902年乔治·巴尔·麦卡奇翁撰写的小说《布鲁斯特的百万横财》，中国版故事发生在《夏洛特烦恼》中的“特烦恼”之城“西虹市”。混迹于丙级业余足球队的守门员王多鱼（沈腾饰演），因比赛失利被开除离队。正处于人生最低谷的他接受了神秘台湾财团“一个月花光十亿资金”的挑战。本以为快乐生活就此开始，王多鱼却第一次感到“花钱特烦恼”！想要人生反转走上巅峰，真的没有那么简单。",
+            "style": {
+                "isLeadPage": 0,
+                "leadImg": "https://img2.mtime.cn/mg/.jpg",
+                "leadUrl": ""
+            },
+            "totalNominateAward": 0,
+            "totalWinAward": 0,
+            "type": [
+                "喜剧"
+            ],
+            "url": "https://movie.mtime.com/253688/",
+            "video": {
+                "count": 15,
+                "hightUrl": "https://vfx.mtime.cn/Video/2018/07/27/mp4/180727110730229391.mp4",
+                "img": "http://img5.mtime.cn/mg/2018/07/27/110642.42077456_235X132X4.jpg",
+                "title": "西虹市首富 终极预告",
+                "url": "https://vfx.mtime.cn/Video/2018/07/27/mp4/180727110730229391_480.mp4",
+                "videoId": 71386,
+                "videoSourceType": 1
+            }
+        },
+        "boxOffice": {
+            "movieId": 253688,
+            "ranking": 1,
+            "todayBox": 2033130888,
+            "todayBoxDes": "2033.13",
+            "todayBoxDesUnit": "今日实时(万)",
+            "totalBox": 222957533533,
+            "totalBoxDes": "22.3",
+            "totalBoxUnit": "累计票房(亿)"
+        },
+        "live": {
+            "count": 1,
+            "img": "http://img5.mtime.cn/mg/2018/07/20/155901.44035542.jpg",
+            "liveId": 848,
+            "playNumTag": "59.9万次播放",
+            "playTag": "",
+            "status": 4,
+            "title": "《西虹市首富》首映礼"
+        },
+        "playState": "1",
+        "playlist": [],
+        "related": {
+            "goodsCount": 0,
+            "goodsList": [],
+            "relateId": 0,
+            "relatedUrl": "https://mall-wv.mtime.cn/#!/commerce/list/",
+            "type": 0
+        }
+    },
+    "msg": "成功",
+    "showMsg": ""
+}
