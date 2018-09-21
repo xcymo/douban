@@ -36,10 +36,10 @@
             <div class="willComeMovie">
               <div>
                 <div class="dateChoose">
-                  <span @click="changeDateFilter('all')" :class="{selectedMonth : showWhich == 'all'}">全部</span>
-                  <span @click="changeDateFilter('1')" :class="{selectedMonth : showWhich == '1'}">8月</span>
-                  <span @click="changeDateFilter('2')" :class="{selectedMonth : showWhich == '2'}">9月</span>
-                  <span @click="changeDateFilter('3')" :class="{selectedMonth : showWhich == '3'}">10月</span>
+                  <span @click="changeDateFilter(0)" :class="{selectedMonth : showWhich == 0}">全部</span>
+                  <span @click="changeDateFilter(1)" :class="{selectedMonth : showWhich == 1}">{{thisMonth}}月</span>
+                  <span @click="changeDateFilter(2)" :class="{selectedMonth : showWhich == 2}">{{thisMonth+1}}月</span>
+                  <span @click="changeDateFilter(3)" :class="{selectedMonth : showWhich == 3}">{{thisMonth+2}}月</span>
                   <span class="blank"></span>
                   <span @click="orderedBy(0)" :class="{selectedMonth : !orderByPop}">时间</span>
                   <span @click="orderedBy(1)" :class="{selectedMonth : orderByPop}">热度</span>
@@ -47,7 +47,7 @@
                 <div class="jjContent" ref="BSwill">
                   <div class="onShowMovie">
                     <div v-for="(movie,index) in onTheListMovie" v-show="_isOnShow(movie)" @click="goDetail(movie)" :key="movie.title">
-                      <div v-if="showThis('1',movie.rMonth,thisMonth)" v-show="isSelectedMonth('1')">
+                      <div v-if="showThis('1',movie.rMonth,thisMonth)" v-show="isSelectedMonth(1)">
                         <div class="dateSplit" v-once v-show="hasShowed(index)">{{whenShow(movie)}}</div>
                         <div class="movieBox">
                           <div class="leftBox"><img alt="pic" :src="movie.image"></div>
@@ -63,7 +63,7 @@
                           </div>
                         </div>
                       </div>
-                      <div v-if="showThis('2',movie.rMonth,thisMonth+1)" v-show="isSelectedMonth('2')">
+                      <div v-if="showThis('2',movie.rMonth,thisMonth+1)" v-show="isSelectedMonth(2)">
                         <div class="dateSplit" v-once v-show="hasShowed(index)&&(!orderByPop)">{{whenShow(movie)}}</div>
                         <div class="movieBox">
                           <div class="leftBox"><img alt="pic" :src="movie.image"></div>
@@ -79,7 +79,7 @@
                           </div>
                         </div>
                       </div>
-                      <div v-if="showThis('3',movie.rMonth,thisMonth+2)" v-show="isSelectedMonth('3')">
+                      <div v-if="showThis('3',movie.rMonth,thisMonth+2)" v-show="isSelectedMonth(3)">
                         <div class="dateSplit" v-once v-show="hasShowed(index)">{{whenShow(movie)}}</div>
                         <div class="movieBox">
                           <div class="leftBox"><img alt="pic" :src="movie.image"></div>
@@ -125,9 +125,9 @@ export default {
   data() {
     return {
       // onShowMovieList: [],
-      onTheListMovie: [],
+      // onTheListMovie: [],
       // orderTimeList: [],
-      showWhich: "all",
+      showWhich: 0,
       orderByPop: false,
       windowHeight: "",
       activeName: "tab1",
@@ -143,7 +143,9 @@ export default {
       "onTheListMovie"
     ]),
     thisMonth: function() {
-      return this.onTheListMovie[0].rMonth;
+      if (this.onTheListMovie[0]) {
+        return this.onTheListMovie[0].rMonth;
+      }
     }
     // orderPopList: function() {
     //   return [...this.orderTimeList].sort(function(item1, item2) {
@@ -153,10 +155,12 @@ export default {
   },
   methods: {
     ...mapMutations([
-      "fillonShowMovieListData",
+      "fillOnShowMovieListData",
       "fillOnTheListData",
-      "fillByTime",
-      "fillByPop"
+      "orderByTimeX",
+      "orderByPopX",
+      "fillOrderTimeListData",
+      "fillOrderPopListData"
     ]),
     goSelectCity() {
       this.$router.push("/cityChoose");
@@ -190,10 +194,7 @@ export default {
       this.showWhich = arg;
     },
     showThis(arg1, month, arg2) {
-      if (
-        (this.showWhich == "all" || this.showWhich == arg1) &&
-        month == arg2
-      ) {
+      if ((this.showWhich == 0 || this.showWhich == arg1) && month == arg2) {
         return true;
       } else {
         return false;
@@ -246,8 +247,8 @@ export default {
       return str;
     },
     isSelectedMonth(month) {
-      let m = month + "";
-      if (this.showWhich == "all") {
+      let m = month;
+      if (this.showWhich == 0) {
         return true;
       } else if (this.showWhich == m) {
         return true;
@@ -258,10 +259,10 @@ export default {
     orderedBy(num) {
       if (num == 0) {
         this.orderByPop = false;
-        this.fillByTime();
+        this.orderByTimeX();
       } else if (num == 1) {
         this.orderByPop = true;
-        this.fillByPop();
+        this.orderByPopX();
       }
     },
     goDetail(movie) {
@@ -282,16 +283,18 @@ export default {
         }, 200);
       });
     },
-    loadData1(api, data, ref) {
+    loadData1() {
       if (this.onShowMovieList.length > 0) {
         return;
       }
       axios
         .get("/api/hotMovie?locationId=290")
         .then(res => {
-          // console.log(res);
+          console.log("11111");
+          console.log(res);
           if (res.status == 200) {
-            this.fillonShowMovieListData(res.data.ms);
+            console.log("rererer");
+            this.fillOnShowMovieListData(res.data.ms);
             this.$nextTick(() => {
               if (!this.scroll) {
                 this.scroll1 = new BScroll(this.$refs.BSon, { click: true });
@@ -309,28 +312,37 @@ export default {
         })
         .catch(err => {});
     },
-    loadData2(api, data, ref) {
-      if (this.onShowMovieList.length > 0) {
+    loadData2() {
+      if (this.onTheListMovie.length > 0) {
         return;
       }
       axios
         .get("/api/movieComing?locationId=290")
         .then(res => {
-          this.onTheListMovie = res.data.moviecomings;
-          this.orderTimeList = res.data.moviecomings;
+          if (res.status == 200) {
+            console.log(res);
+            this.fillOrderTimeListData(res.data.moviecomings);
+            this.fillOrderPopListData(
+              res.data.moviecomings.sort((s1, s2) => {
+                return s2.wantedCount - s1.wantedCount;
+              })
+            );
+            this.orderByTimeX();
+          }
         })
         .catch(err => {});
     },
     _initScroll() {
-      this.Scroll1 = new BScroll(this.$refs.BSon, {
-        click: true
-      });
-      this.Scroll2 = new BScroll(this.$refs.BSwill, {
-        click: true
-      });
-      this.Scroll2.on("scroll", pos => {
-        this.scrollY = Math.abs(Math.round(pos.y));
-      });
+      let Scroll1;
+      let Scroll2;
+      setTimeout(() => {
+        Scroll1 = new BScroll(this.$refs.BSon, {
+          click: true
+        });
+        Scroll2 = new BScroll(this.$refs.BSwill, {
+          click: true
+        });
+      }, 200);
     }
   },
   filters: {
@@ -343,13 +355,7 @@ export default {
   },
   created() {
     this.loadData1();
-    axios
-      .get("/api/movieComing?locationId=290")
-      .then(res => {
-        this.onTheListMovie = res.data.moviecomings;
-        this.orderTimeList = res.data.moviecomings;
-      })
-      .catch(err => {});
+    this.loadData2();
     this._initScroll();
   },
   mounted() {

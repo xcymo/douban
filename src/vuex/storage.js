@@ -63,16 +63,20 @@ const mutations = {
         state.movie.rate = arg.rate;
         state.movie.wantedCount = arg.wantedCount;
     },
-    fillonShowMovieListData(state, arr) {
+    fillOnShowMovieListData(state, arr) {
+        console.log("vuex");
         state.onShowMovieList = [...state.onShowMovieList, ...arr];
     },
-    // fillOnTheListData(state, arr) {
-    //     state.onTheListMovie = [...state.onTheListMovie, ...arr];
-    // },
-    fillByTime(state) {
+    fillOrderTimeListData(state, arr) {
+        state.orderTimeList = [...state.orderTimeList, ...arr];
+    },
+    fillOrderPopListData(state, arr) {
+        state.orderPopList = [...state.orderPopList, ...arr];
+    },
+    orderByTimeX(state) {
         state.onTheListMovie = state.orderTimeList;
     },
-    fillByPop(state) {
+    orderByPopX(state) {
         state.onTheListMovie = state.orderPopList;
     },
 }
