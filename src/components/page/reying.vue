@@ -144,7 +144,7 @@ export default {
     ]),
     thisMonth: function() {
       if (this.onTheListMovie[0]) {
-        return this.onTheListMovie[0].rMonth;
+        return Number(this.onTheListMovie[0].rMonth);
       }
     }
     // orderPopList: function() {
