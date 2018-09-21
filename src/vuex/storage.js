@@ -20,8 +20,11 @@ const state = {
         loaf: 115,
         rate: 6.8,
         wantedCount: 4545
-
-    }
+    },
+    onShowMovieList: [],
+    onTheListMovie: [],
+    orderTimeList: [],
+    orderPopList: []
 }
 
 const mutations = {
@@ -50,16 +53,28 @@ const mutations = {
         state.pastDay1 = day;
         state.pastMonth1 = month;
     },
-    changeMovie(state,arg){
-        
+    changeMovie(state, arg) {
+
         state.movie.title = arg.title;
-        state.movie.img=arg.img;
+        state.movie.img = arg.img;
         state.movie.year = arg.year;
         state.movie.date = arg.date;
         state.movie.loaf = arg.loaf;
         state.movie.rate = arg.rate;
         state.movie.wantedCount = arg.wantedCount;
-    }
+    },
+    fillonShowMovieListData(state, arr) {
+        state.onShowMovieList = [...state.onShowMovieList, ...arr];
+    },
+    // fillOnTheListData(state, arr) {
+    //     state.onTheListMovie = [...state.onTheListMovie, ...arr];
+    // },
+    fillByTime(state) {
+        state.onTheListMovie = state.orderTimeList;
+    },
+    fillByPop(state) {
+        state.onTheListMovie = state.orderPopList;
+    },
 }
 
 

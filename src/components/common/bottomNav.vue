@@ -18,16 +18,14 @@ import { mapMutations, mapState } from "vuex";
 export default {
   store,
   data() {
-    return {
-      
-    }
+    return {};
   },
   computed: {
     ...mapState(["homePage", "bottomOpts"]),
     bottomOpts1: () => store.state.bottomOpts
   },
   methods: {
-    ...mapMutations(["switchPage","pageCorrect"]),
+    ...mapMutations(["switchPage", "pageCorrect"]),
     // toggleActive(index) {
     //   this.bottomOpts.forEach((v, i) => {
     //     if (i == index) {
@@ -42,7 +40,7 @@ export default {
       this.$router.push({ name: store.state.homePage });
     }
   },
-  created(){
+  created() {
     this.pageCorrect(this.$route.name);
   }
 };
