@@ -7,7 +7,6 @@ import ElementUI from 'element-ui';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueResource from 'vue-resource'
-import 'element-ui/lib/theme-chalk/index.css';
 import $ from 'jquery';
 import VueJsonp from 'vue-jsonp';
 Vue.config.productionTip = false
