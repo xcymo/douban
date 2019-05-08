@@ -25,21 +25,21 @@
 
 <script>
 export default {
-    data(){
-        return{
-            historyItem:['星际穿越','剪刀手爱德华','绝命毒师','致命魔术'],
-            wasAt:''
-        }
-    },
-    methods:{
-        goBack(){
-            this.wasAt = this.$route.params.wasAt;
-            this.$router.push({name: this.wasAt});
-        }
-    }
+	data() {
+		return {
+			historyItem: ["星际穿越", "剪刀手爱德华", "绝命毒师", "致命魔术"],
+			wasAt: ""
+		};
+	},
+	methods: {
+		goBack() {
+			this.wasAt = this.$route.params.wasAt;
+			this.$router.push({ name: this.wasAt });
+		}
+	}
 };
 </script>
 
 <style>
-    @import url(../../common/css/douban.css);
+@import url(../../common/css/douban.css);
 </style>

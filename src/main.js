@@ -10,13 +10,14 @@ import VueResource from 'vue-resource'
 import $ from 'jquery';
 import VueJsonp from 'vue-jsonp';
 Vue.config.productionTip = false
-Vue.use(ElementUI,VueAxios,axios,VueResource,VueJsonp);
+Vue.use(ElementUI, VueAxios, axios, VueResource, VueJsonp);
 Vue.prototype.HOST = '/api/hotMovie';
 window.onresize = setHtmlFontSize;
-function setHtmlFontSize(){
-    const htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
-    const htmlDom = document.getElementsByTagName('html')[0];
-    htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+
+function setHtmlFontSize() {
+  const htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+  const htmlDom = document.getElementsByTagName('html')[0];
+  htmlDom.style.fontSize = htmlWidth / 10 + 'px';
 };
 setHtmlFontSize();
 
@@ -24,6 +25,8 @@ setHtmlFontSize();
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })
